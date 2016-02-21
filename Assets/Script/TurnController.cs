@@ -11,6 +11,7 @@ public class TurnController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         turn = false;
+        Debug.Log("false");
 	}
 	
 	// Update is called once per frame
@@ -54,5 +55,9 @@ public class TurnController : MonoBehaviour {
         for (int i = 0; i < ws.Length; i++)
             Destroy(ws[i]);
         ui_text.text = "";
+        turn = false;
+        Debug.Log("false");
+    
+    ui_text.text = "fk u";
     }
 }
