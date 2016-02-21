@@ -7,7 +7,7 @@ public class ColliderGenerator : MonoBehaviour {
     private GameObject tem;
     private Vector3 gen_pos;
 	// Use this for initialization
-	void Start () {
+	public void Generate () {
         gen_pos = new Vector3(-55f, 0.5f, -51.5f);
         
         for(int i=0;i<19;i++)

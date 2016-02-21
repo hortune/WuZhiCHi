@@ -5,7 +5,6 @@ public class press : MonoBehaviour
 {
     public GameObject white;
     public GameObject black;
-    public TurnController turnc;
     private GameObject g;
     public static bool[,] used_pos = new bool[19, 19];
     public static int[,] pos_id = new int[19, 19];//1為白 2為黑
@@ -24,8 +23,7 @@ public class press : MonoBehaviour
         int y = (int)((gameObject.transform.position.z + 51.5f) / 6f);
         if (!used_pos[x, y])
         {
-
-            if (turnc.turn == false)
+            if (TurnController.turn == false)
             {
                 g = Instantiate(black, gameObject.transform.position, Quaternion.identity) as GameObject;
                 pos_id[x, y] = 2;
@@ -35,7 +33,8 @@ public class press : MonoBehaviour
                 g = Instantiate(white, gameObject.transform.position, Quaternion.identity) as GameObject;
                 pos_id[x, y] = 1;
             }
-            turnc.turn = !turnc.turn;
+
+            TurnController.turn = !TurnController.turn;
             Destroy(gameObject);
 
             used_pos[x, y] = true;
