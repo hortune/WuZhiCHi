@@ -21,34 +21,7 @@ public class TurnController : MonoBehaviour {
         bs = GameObject.FindGameObjectsWithTag("black");
         ws = GameObject.FindGameObjectsWithTag("white");
         spot = GameObject.FindGameObjectsWithTag("spot");
-        for (int i = 2; i < 17; i++)
-            for (int j = 2; j < 17; j++)
-            {
-                if (press.pos_id[i, j] == 1 && press.pos_id[i - 1, j] == 1 && press.pos_id[i - 2, j] == 1 && press.pos_id[i + 1, j] == 1 && press.pos_id[i + 2, j] == 1)
-                {
-                    ui_text.text = "White Wins!!! Press Clear To Replay";
-                }
-                else if (press.pos_id[i, j] == 2 && press.pos_id[i - 1, j] == 2 && press.pos_id[i - 2, j] == 2 && press.pos_id[i + 1, j] == 2 && press.pos_id[i + 2, j] == 2)
-                {
-                    ui_text.text = "Black Wins!!! Press Clear To Replay";
-                }
-                else if (press.pos_id[i, j] == 1 && press.pos_id[i, j - 1] == 1 && press.pos_id[i, j - 2] == 1 && press.pos_id[i, j + 1] == 1 && press.pos_id[i, j + 2] == 1)
-                {
-                    ui_text.text = "White Wins!!! Press Clear To Replay";
-                }
-                else if (press.pos_id[i, j] == 2 && press.pos_id[i, j - 1] == 2 && press.pos_id[i, j - 2] == 2 && press.pos_id[i, j + 1] == 2 && press.pos_id[i, j + 2] == 2)
-                {
-                    ui_text.text = "Black Wins!!! Press Clear To Replay";
-                }
-                else if (press.pos_id[i, j] == 1 && press.pos_id[i - 1, j - 1] == 1 && press.pos_id[i - 2, j - 2] == 1 && press.pos_id[i + 1, j + 1] == 1 && press.pos_id[i + 2, j + 2] == 1)
-                {
-                    ui_text.text = "White Wins!!! Press Clear To Replay";
-                }
-                else if (press.pos_id[i, j] == 2 && press.pos_id[i - 1, j - 1] == 2 && press.pos_id[i - 2, j - 2] == 2 && press.pos_id[i + 1, j + 1] == 2 && press.pos_id[i + 2, j + 2] == 2)
-                {
-                    ui_text.text = "Black Wins!!! Press Clear To Replay";
-                }
-            }
+        
     }
 
     public void Clear()
