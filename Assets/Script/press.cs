@@ -49,36 +49,36 @@ public class press : MonoBehaviour
             plat = GameObject.FindGameObjectWithTag("Player");
             ai = plat.GetComponent<AI>();
 
-            for (int i = 2; i < 17; i++)
-                for (int j = 2; j < 17; j++)
+            for (int i = 0; i < 19; i++)
+                for (int j = 0; j < 19; j++)
                 {
-                    if (press.pos_id[i, j] == 1 && press.pos_id[i - 1, j] == 1 && press.pos_id[i - 2, j] == 1 && press.pos_id[i + 1, j] == 1 && press.pos_id[i + 2, j] == 1)
+                    if (i >= 2 && i < 17 && press.pos_id[i, j] == 1 && press.pos_id[i - 1, j] == 1 && press.pos_id[i - 2, j] == 1 && press.pos_id[i + 1, j] == 1 && press.pos_id[i + 2, j] == 1)
                     {
                         re.text = "White Wins!!! Press Clear To Replay";
                     }
-                    else if (press.pos_id[i, j] == 2 && press.pos_id[i - 1, j] == 2 && press.pos_id[i - 2, j] == 2 && press.pos_id[i + 1, j] == 2 && press.pos_id[i + 2, j] == 2)
+                    else if (i >= 2 && i < 17 && press.pos_id[i, j] == 2 && press.pos_id[i - 1, j] == 2 && press.pos_id[i - 2, j] == 2 && press.pos_id[i + 1, j] == 2 && press.pos_id[i + 2, j] == 2)
                     {
                         re.text = "Black Wins!!! Press Clear To Replay";
                     }
-                    else if (press.pos_id[i, j] == 1 && press.pos_id[i, j - 1] == 1 && press.pos_id[i, j - 2] == 1 && press.pos_id[i, j + 1] == 1 && press.pos_id[i, j + 2] == 1)
+                    else if (j >= 2 && j < 17 && press.pos_id[i, j] == 1 && press.pos_id[i, j - 1] == 1 && press.pos_id[i, j - 2] == 1 && press.pos_id[i, j + 1] == 1 && press.pos_id[i, j + 2] == 1)
                     {
                         re.text = "White Wins!!! Press Clear To Replay";
                     }
-                    else if (press.pos_id[i, j] == 2 && press.pos_id[i, j - 1] == 2 && press.pos_id[i, j - 2] == 2 && press.pos_id[i, j + 1] == 2 && press.pos_id[i, j + 2] == 2)
+                    else if (j >= 2 && j < 17 && press.pos_id[i, j] == 2 && press.pos_id[i, j - 1] == 2 && press.pos_id[i, j - 2] == 2 && press.pos_id[i, j + 1] == 2 && press.pos_id[i, j + 2] == 2)
                     {
                         re.text = "Black Wins!!! Press Clear To Replay";
                     }
-                    else if (press.pos_id[i, j] == 1 && press.pos_id[i - 1, j - 1] == 1 && press.pos_id[i - 2, j - 2] == 1 && press.pos_id[i + 1, j + 1] == 1 && press.pos_id[i + 2, j + 2] == 1)
+                    else if (i >= 2 && i < 17 && j >= 2 && j < 17 && press.pos_id[i, j] == 1 && press.pos_id[i - 1, j - 1] == 1 && press.pos_id[i - 2, j - 2] == 1 && press.pos_id[i + 1, j + 1] == 1 && press.pos_id[i + 2, j + 2] == 1)
                     {
                         re.text = "White Wins!!! Press Clear To Replay";
                     }
-                    else if (press.pos_id[i, j] == 2 && press.pos_id[i - 1, j - 1] == 2 && press.pos_id[i - 2, j - 2] == 2 && press.pos_id[i + 1, j + 1] == 2 && press.pos_id[i + 2, j + 2] == 2)
+                    else if (i >= 2 && i < 17 && j >= 2 && j < 17 && press.pos_id[i, j] == 2 && press.pos_id[i - 1, j - 1] == 2 && press.pos_id[i - 2, j - 2] == 2 && press.pos_id[i + 1, j + 1] == 2 && press.pos_id[i + 2, j + 2] == 2)
                     {
                         re.text = "Black Wins!!! Press Clear To Replay";
                     }
                 }
-
-            ai.AI_turn();
+            if(TurnController.ai_switch)
+                ai.AI_turn();
         }
     }
 }

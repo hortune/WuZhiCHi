@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 230b49dfd84c4a64e8e358770565f903
-timeCreated: 1456044676
+timeCreated: 1456160076
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - b_chess: {fileID: 124310, guid: b7430e13f7c09014997424d2098962ae, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
